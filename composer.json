@@ -1,0 +1,22 @@
+{
+    "name": "xjtuwangke/laravel-seeder",
+    "description": "",
+    "authors": [
+        {
+            "name": "xjtuwangke",
+            "email": "wangke85@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+        , "fzaninotto/faker": "1.5.*@dev"
+        , "keboola/csv": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Xjtuwangke\\LaravelSeeder": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
