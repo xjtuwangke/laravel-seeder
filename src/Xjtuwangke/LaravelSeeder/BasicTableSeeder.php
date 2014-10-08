@@ -50,7 +50,8 @@ class BasicTableSeeder extends \Seeder {
         $this->command->info( "starting to seed table:{$table} with model:{$model}" );
 
         $method = 'seeds_' . strtolower( $table ) ;
-        $method2 = 'seeds_model_' . $model;
+        $model_namespace = explode( '\\' , $model );
+        $method2 = 'seeds_model_' . array_pop( $model_namespace );
         if( method_exists( $this ,  $method ) ){
             $this->seed( $table , $model , $method );
         }
