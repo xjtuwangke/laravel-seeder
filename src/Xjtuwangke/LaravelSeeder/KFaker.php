@@ -20,6 +20,7 @@ class KFaker {
         $faker->addProvider( new \Faker\Provider\Lorem($faker) );
         $faker->addProvider( new \Faker\Provider\DateTime( $faker ) );
         $faker->addProvider( new \Faker\Provider\Internet( $faker ) );
+        $faker->addProvider( new \Faker\Provider\Image( $faker ) );
 
         $faker->seed( rand( 0 , 65535 ) );
 

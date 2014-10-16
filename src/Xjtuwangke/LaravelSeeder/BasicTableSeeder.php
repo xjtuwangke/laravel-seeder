@@ -101,4 +101,20 @@ class BasicTableSeeder extends \Seeder {
         }
         return $seeds;
     }
+
+    protected function fake_html5(){
+        $html5 = <<<HTML
+<h1>{$this->faker->sentence}</h1>
+<h3 style="text-align:right">{$this->faker->sentence}</h3>
+<p>{$this->faker->paragraph}</p>
+<ul>
+<li>{$this->faker->paragraph}</li>
+<li>{$this->faker->paragraph}</li>
+</ul>
+<p>{$this->faker->paragraph}</p>
+<img src="{$this->faker->imageUrl()}">
+<p>{$this->faker->paragraph}</p>
+HTML;
+        return $html5;
+    }
 }
