@@ -35,7 +35,7 @@ class BasicTableSeeder extends \Seeder {
 
         foreach( $tables as $table => $model ){
             if( ! in_array( $model , $this->doNotDelete ) ){
-                \DB::table( $table )->delete();
+                \DB::table( $table )->truncate();
             }
         }
 
