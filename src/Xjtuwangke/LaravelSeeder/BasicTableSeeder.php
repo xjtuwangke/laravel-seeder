@@ -103,6 +103,7 @@ class BasicTableSeeder extends \Seeder {
     }
 
     protected function fake_html5(){
+        $image = $this->faker->imageUrl( 600 , 400 , 'business') . rand( 0 , 10 );
         $html5 = <<<HTML
 <h1>{$this->faker->sentence}</h1>
 <h3 style="text-align:right">{$this->faker->sentence}</h3>
@@ -112,7 +113,7 @@ class BasicTableSeeder extends \Seeder {
 <li>{$this->faker->paragraph}</li>
 </ul>
 <p>{$this->faker->paragraph}</p>
-<img src="{$this->faker->imageUrl()}">
+<img src="{$image}">
 <p>{$this->faker->paragraph}</p>
 HTML;
         return $html5;
